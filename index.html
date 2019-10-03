@@ -1,20 +1,45 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    <!-- box to show password-->
-    <div id="newPassBox"></div>
-    <!-- button to geneerate -->
-    <button id="newPassBtn" onclick="showPass()">Get Passphrase!</button>
-    <!-- button copy to clipboard -->
-    <button>Copy to Clipboard</button>
-    <button onclick="refresh(), showPass()">Refresh</button>
+<html class="f-f" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet">
+    <title>THE PASSPHRASE GENERATOR</title>
+  </head>
+  <body>
+
+
+
+
+
+<section class="ai-c d-g jc-c"><!--grid wapper-->
+    
+   
+        <!-- box to show password-->
+        <div class="bg-c-k c-w gbx-0 ta-c" id="newPassBox" > PASSWORD WILL GENERATE HERE</div>
+        <!-- button to generate -->
+        <button class="bg-c-g-fc bg-c-ng-hv bg-c-k b-t-n c-ng c-k-fc c-k-hv gbx-1 mr-s p-s td-n s-hv t-g-hv t-s-fc" id="genPassBtn" onclick="genPass()">web\generatorAI\humanUser> ACQUIRE PASSPHRASE</button>
+        <!-- button copy refresh -->
+        <button class="bg-c-g-fc bg-c-ng-hv bg-c-k b-t-n c-ng c-k-fc c-k-hv gbx-3 mr-s p-s td-n s-hv t-g-hv t-s-fc" onclick="clearPassBox()">web\deletionAI\humanUser> ERASE DATA</button>
+        <!-- button copy to clipboard -->
+        <button class="bg-c-g-fc bg-c-ng-hv bg-c-k b-t-n c-ng c-k-fc c-k-hv gbx-2 mr-s p-s td-n s-hv t-g-hv t-s-fc" id="copyBtn"onclick="copyPass()">web\clonerAI\humanUser> CLONE TO CLIPBOARD</button>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
     <!-- external js -->
-    <script src="./app.js"></script>
-</body>
+    <script src="C:\Users\scott\code\passwordgenerator\assets\js\app.js"></script>
+  </body>
 </html>
