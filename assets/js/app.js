@@ -1,16 +1,35 @@
-var userPromptLength = prompt('How long do you want your passphrase? (In whole numbers)');
-var wantSpec = confirm('Do you want Special Characters?');
-var wantNum = confirm('Do you want Numbers?');
-var newPass = [];
+
 var letterSet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z'];
 var numSet = ['1','2','3','5','6','7','8','9','0'];
 var specSet = ['!','@','$','&','~'];
 var timesClicked = 0;
 
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
 
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
 
 function genPass() {
-  for (i = 0; i < userPromptLength; i++) {
+  var newPass = [];
+  var userPromptLength = document.getElementById('input').value;
+  var wantSpec = confirm('Do you want Special Characters?'); //turn into tick box
+  var wantNum = confirm('Do you want Numbers?'); //turn into tick box
+
+  for (i = 0; i < userPromptLength; i++) { 
     if (wantSpec === true && i === 0) {
       // inject symbol
       var randSpec = Math.floor(Math.random() * specSet.length); //random character from speSet Array
@@ -24,22 +43,10 @@ function genPass() {
       newPass.push(letterSet[randLetter]);
     };
   }
-
-  timesClicked++;
-  newPassBox.textContent = newPass.join("");
-
+  newPassShuffle = shuffle(newPass);
+  newPassBox.textContent = newPass.join('');
 }
 
-function clearPassBox() {
-  newPass = [];
-  newPassBox.textContent = "PASSWORD WILL GENERATE HERE";
-for (i = 0; timesClicked < 0; i++)
-  document.getElementById("genPassBtn").click(function() {
-    if (timesClicked > 1) {
-      clearPassBox(); //run clearPass function
-    } 
-  });
-}
 
 
 //copy text inside passphrase box to clipboard
@@ -56,7 +63,3 @@ function copyPass() {
   document.removeEventListener("copy", listener);
 }
 
-//refresh page, clearing box with password
-function refresh() {
-  window.location.reload();
-}
