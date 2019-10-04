@@ -128,7 +128,7 @@
 
   /* font family */
   .f-f {
-    font-family: 'PT Mono', monospace;
+    font-family: "PT Mono", monospace;
   }
 
   /* font size: jumbo, large, medium, small */
@@ -637,7 +637,7 @@
 
   /* font family */
   .f-f {
-    font-family: 'PT Mono', monospace;
+    font-family: "PT Mono", monospace;
   }
 
   /* font size: jumbo, large, medium, small */
@@ -1149,7 +1149,7 @@
 
   /* font family */
   .f-f {
-    font-family: 'PT Mono', monospace;
+    font-family: "PT Mono", monospace;
   }
 
   /* font size: jumbo, large, medium, small */
@@ -1788,7 +1788,7 @@
 
   /* font family */
   .f-f {
-    font-family: 'PT Mono', monospace;
+    font-family: "PT Mono", monospace;
   }
 
   /* font size: jumbo, large, medium, small */
@@ -2300,6 +2300,12 @@
       no-repeat center center fixed;
     background-size: cover;
   }
+
+  /* input styles */
+  input {
+    text-align: right;
+  }
+  
   /* align content: space around */
   .ac-sa {
     align-content: space-around;
@@ -2349,19 +2355,19 @@
 
   /* background color: green, dark green, light green, black, black opaque, no color, neon green, white */
   .bg-c-g {
-    background-color: rgb(45,136, 45);
+    background-color: rgb(45, 136, 45);
   }
 
   .bg-c-dg {
-    background-color: rgb(17,102, 17);
+    background-color: rgb(17, 102, 17);
   }
 
   .bg-c-lg {
-    background-color: rgb(85,170, 85);
+    background-color: rgb(85, 170, 85);
   }
 
   .bg-c-k {
-    background-color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0);
   }
 
   .bg-c-n {
@@ -2386,21 +2392,21 @@
 
   /* color: green, dark green, light green, black, no color, neon green, white */
   .c-g {
-    color: rgb(45,136, 45);
+    color: rgb(45, 136, 45);
   }
 
   .c-dg {
-    color: rgb(17,102, 17);
+    color: rgb(17, 102, 17);
   }
 
   .c-lg {
-    color: rgb(85,170, 85);
+    color: rgb(85, 170, 85);
   }
 
   .c-k {
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
   }
-  
+
   .c-n {
     color: transparent;
   }
@@ -2441,9 +2447,9 @@
 
   /* font family */
   .f-f {
-    font-family: 'PT Mono', monospace;
+    font-family: "PT Mono", monospace;
   }
-  
+
   /* font size: jumbo, large, medium, small */
   .fs-j {
     font-size: 2.5rem;
@@ -2726,20 +2732,33 @@
 
   /* ------------------ON FOCUS ------------------ */
   /* change background color: green, dark green, light green, black, black opaque, no color, neon green, white */
+  button:focus {
+    outline-color: rgb(0, 222, 0);
+  }
+
+  input[type="checkbox"]:focus {
+    outline-color: rgb(0, 222, 0);
+  }
+
+  input[type="number"]:focus {
+    outline-color: rgb(0, 222, 0);
+    color: rgb(0, 222, 0);
+  }
+
   .bg-c-g-fc:focus {
-    background-color: rgb(45,136, 45);
+    background-color: rgb(45, 136, 45);
   }
 
   .bg-c-dg-fc:focus {
-    background-color: rgb(17,102, 17);
+    background-color: rgb(17, 102, 17);
   }
 
   .bg-c-lg-fc:focus {
-    background-color: rgb(85,170, 85);
+    background-color: rgb(85, 170, 85);
   }
 
   .bg-c-k-fc:focus {
-    background-color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0);
   }
 
   .bg-c-n-fc:focus {
@@ -2754,24 +2773,24 @@
     background-color: rgb(255, 255, 255);
   }
 
-    /* change color: green, dark green, light green, black, black opaque, no color, neon green, white */
+  /* change color: green, dark green, light green, black, black opaque, no color, neon green, white */
 
   .c-g-fc:focus {
-    color: rgb(45,136, 45);
+    color: rgb(45, 136, 45);
   }
 
   .c-dg-fc:focus {
-    color: rgb(17,102, 17);
+    color: rgb(17, 102, 17);
   }
 
   .c-lg-fc:focus {
-    color: rgb(85,170, 85);
+    color: rgb(85, 170, 85);
   }
 
   .c-k-fc:focus {
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
   }
-  
+
   .c-n-fc:focus {
     color: transparent;
   }
@@ -2806,19 +2825,19 @@
   /* ------------------ ON HOVER ------------------ */
   /* change background color: green, dark green, light green, black, black opaque, no color, neon green, white */
   .bg-c-g-hv:hover {
-    background-color: rgb(45,136, 45);
+    background-color: rgb(45, 136, 45);
   }
 
   .bg-c-dg-hv:hover {
-    background-color: rgb(17,102, 17);
+    background-color: rgb(17, 102, 17);
   }
 
   .bg-c-lg-hv:hover {
-    background-color: rgb(85,170, 85);
+    background-color: rgb(85, 170, 85);
   }
 
   .bg-c-k-hv:hover {
-    background-color: rgb(0,0,0);
+    background-color: rgb(0, 0, 0);
   }
 
   .bg-c-n-hv:hover {
@@ -2835,21 +2854,21 @@
 
   /* change color: green, dark green, light green, black, black opaque, no color, neon green, white */
   .c-g-hv:hover {
-    color: rgb(45,136, 45);
+    color: rgb(45, 136, 45);
   }
 
   .c-dg-hv:hover {
-    color: rgb(17,102, 17);
+    color: rgb(17, 102, 17);
   }
 
   .c-lg-hv:hover {
-    color: rgb(85,170, 85);
+    color: rgb(85, 170, 85);
   }
 
   .c-k-hv:hover {
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
   }
-  
+
   .c-n-hv:hover {
     color: transparent;
   }
@@ -2881,6 +2900,35 @@
     -moz-box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
   }
 
+  /* ------------ ON SELECTION --------------- */
+  /*** Works on common browsers ***/
+  ::selection {
+    background-color: rgb(0, 222, 0);
+    color: rgb(0, 0, 0);
+  }
+
+  /*** Mozilla based browsers ***/
+  ::-moz-selection {
+    background-color: rgb(0, 222, 0);
+    color: rgb(0, 0, 0);
+  }
+
+  /***For Other Browsers ***/
+  ::-o-selection {
+    background-color: rgb(0, 222, 0);
+    color: rgb(0, 0, 0);
+  }
+
+  ::-ms-selection {
+    background-color: rgb(0, 222, 0);
+    color: rgb(0, 0, 0);
+  }
+
+  /*** For Webkit ***/
+  ::-webkit-selection {
+    background-color: rgb(0, 222, 0);
+    color: rgb(0, 0, 0);
+  }
 
   /* -------------- GRID CSS --------------- */
   .d-g {
@@ -2916,4 +2964,15 @@
     grid-row: auto;
   }
 
+  .gbx-4 {
+    grid-area: gbx-3;
+    grid-column: 1/1;
+    grid-row: auto;
+  }
+
+  .gbx-5 {
+    grid-area: gbx-3;
+    grid-column: 1/1;
+    grid-row: auto;
+  }
 }
