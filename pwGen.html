@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="f-f" lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/pwStyle.css" />
+  <link href="https://fonts.googleapis.com/css?family=PT+Mono&display=swap" rel="stylesheet" />
+  <title>THE PASSPHRASE GENERATOR</title>
+</head>
+<body>
+    <div class="bg-c-N c-w fs-l mt-xxl mxw-h ta-c" id="newPassBox">_ENCRIPTION SEQUENCE WILL GENERATE HERE\></div> <!-- box to show password-->
+  <section class="ai-c d-g jc-c p-s"><!--grid wapper-->
+    <div class="bg-c-ng c-k gbx-1">_SELECT A NUMERICAL VALUE USING THE ARROWS\> <input class="bg-c-k c-ng " id="input" type="number" min="8" max="128" name="length"></div> <!--enter a number, limited range 8-128 using arrows-->
+      <label class="bg-c-ng c-k gbx-2 ta-c">_ENABLE INTEGRATION OF |1| SPECIAL CHARTACTER\> <input type="checkbox" id="chkSpec"></label> <!--want special input-->       
+      <label class="bg-c-ng c-k gbx-3 ta-c">_ENABLE INTEGRATION OF |1| NUMERICAL CHARACTER\> <input type="checkbox" id="chkNum"></label> <!--want number input-->
+      <label class="bg-c-ng c-k gbx-4 ta-c">_ENABLE INTEGRATION OF |1| UPPER CASE LETTER\> <input type="checkbox" id="chkUpper"></label> <!--want uppercase input-->
+      <div class="bg-c-ng c-k gbx-5 ta-c">_LOWER CASE LETTER INTEGRATION ENABLED BY DEFAULT\> </div> <!-- lowercase input-->
+      <button class="bg-c-dg-fc bg-c-ng-hv bg-c-k b-t-n c-ng c-ng-fc c-k-hv gbx-6 mr-s p-s td-n s-hv t-g-hv t-s-fc" id="genPassBtn" onclick="genPass()">_ACQUIRE ENCRIPTION SEQUENCE\></button> <!-- button to generate -->
+    <button class="bg-c-dg-fc bg-c-ng-hv bg-c-k b-t-n c-ng c-ng-fc c-k-hv gbx-7 mr-s p-s td-n s-hv t-g-hv t-s-fc" id="copyBtn" onclick="copyPass()">_CLONE TO CLIPBOARD\></button> <!-- button to copy to clipboard -->
+  </section>
+  <script src="C:\Users\scott\code\passwordgenerator\assets\js\pwApp.js"></script> <!-- external js -->
+</body>
+</html>
