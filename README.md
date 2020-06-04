@@ -1,5 +1,5 @@
 # Password Generator
-A web-app allowing for random character generation to use as a new password. Includes the ability to integrate a capital letter, a special character, and a numbner for websites that require it.
+A web-app allowing for random character generation to use as a new password. Includes the ability to integrate a capital letter, a special character, and a number for websites that require it.
 
 ## Instructions
 - Manually enter a number between 8 and 128 or select a number with the provided arrow controls to determine the length of your password.
