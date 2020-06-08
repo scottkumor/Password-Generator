@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html class="f-f" lang="en">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" type="text/css" href="./normalize.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="./style.css" />
   <title>THE PASSPHRASE GENERATOR</title>
 </head>
@@ -12,13 +13,16 @@
   
   <div class="wrapper">
 
+
     <div class="passBox" id="newPassBox">ENCRIPTION SEQUENCE WILL GENERATE HERE</div><!-- box to show password-->
      
+
     <div class="length">
       SELECT A NUMERICAL VALUE USING THE ARROWS <!--enter a number, limited range 8-128 using arrows-->
-      <input class="" value="8" id="length" type="number" inputmode="numeric" min="8" max="32" name="length">
+      <input class="" value="8" id="length" type="number" inputmode="numeric" min="8" max="32" onkeydown="return false" name="length">
     </div> 
-    
+
+
     <div class="btnWrap">
       <button class="" id="genBtn" onclick="genPass()">
         ACQUIRE ENCRIPTION SEQUENCE <!-- button to generate -->
@@ -28,30 +32,40 @@
       </button> 
     </div>
 
-    <input class="" type="checkbox" id="chkSpec">
-    <label for="chkSpec" id="specLbl" class="label ">
-      ENABLE INTEGRATION OF |1| SPECIAL CHARTACTER <!--special char checkbox-->
-    </label>       
 
-    <input type="checkbox" id="chkNum">
-    <label for="chkNum" id="numLbl" class="label ">
-      ENABLE INTEGRATION OF |1| NUMERICAL CHARACTER <!--number checkbox-->
-    </label> 
+    <div class="lblWrap">
+      <input class="" type="checkbox" id="chkSpec">
+      <label for="chkSpec" id="specLbl" class="label">
+        ENABLE INTEGRATION OF |1| SPECIAL CHARTACTER 
+      </label>
+      <i class="fa fa-check"></i>
+    </div>       
 
-    <input type="checkbox" id="chkUpper">
-    <label for="chkUpper" id="upLbl" class="label ">
-      ENABLE INTEGRATION OF |1| UPPER CASE LETTER <!--uppercase letter checkbox-->    
-    </label> 
+    <div class="lblWrap">
+      <input type="checkbox" id="chkNum">
+      <label for="chkNum" id="numLbl" class="label ">
+        ENABLE INTEGRATION OF |1| NUMERICAL CHARACTER 
+      </label>
+      <i class="fa fa-check"></i>
+    </div>
+
+    <div class="lblWrap">
+      <input type="checkbox" id="chkUpper">
+      <label for="chkUpper" id="upLbl" class="label ">
+        ENABLE INTEGRATION OF |1| UPPER CASE LETTER 
+      </label> 
+      <i class="fa fa-check"></i>
+    </div>
+
 
     <div class="blinkWrap">
-      <div class="">
-        LOWER CASE LETTER INTEGRATION ENABLED BY DEFAULT 
+      <div class="lowerBox">
+        > LOWER CASE LETTER INTEGRATION ENABLED BY DEFAULT 
       </div>
       <div class="blink">|</div > 
     </div>
 
     
-  
   </div>
   <script src="./app.js"></script> <!-- external js -->
 </body>

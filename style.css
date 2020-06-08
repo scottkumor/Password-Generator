@@ -28,6 +28,9 @@ html {
     white-space: nowrap;
 }
 
+
+
+
 .btnWrap {
     display:flex;
     margin:1vh;
@@ -37,12 +40,22 @@ button {
     margin:.5vw;
     background-color: limegreen;
     outline:none;
-    border: solid .1px limegreen;}
+    border: solid .1px limegreen;
+}
 
 button:hover{
     transform: scale(1.01);
     color:white; 
     background-color: #011a00;
+}
+
+
+input[type="number"] {
+    background-color: #011a00;
+    outline:none;
+    border: 1px solid limegreen;
+    color:limegreen;
+    text-align: right;
 }
 
 
@@ -62,47 +75,39 @@ input[type="checkbox"]{
     visibility:hidden;
 }
 
-input[type="checkbox"]:checked + label{
+input[type="checkbox"]:checked + label {
     color:rgb(62, 255, 62);
 }
 
+.fa-check {
+    display: none;
+}
 
+input[type=checkbox]:checked ~ .fa-check{
+    display: inline-block;
+    color:limegreen;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.lowerBox{
+    background-color: black;
+    color:white;
+}
 
 .blinkWrap {
     display:flex;
+    margin:1vh;
+    background-color: black;
+    color:white;
+    padding:1vh;
 }
 .blink {
-    -webkit-animation: 1s linear infinite condemned_blink_effect; /* for Safari 4.0 - 8.0 */
-    animation: 1s linear infinite condemned_blink_effect;
+    -webkit-animation: 1s linear infinite blinker; /* for Safari 4.0 - 8.0 */
+    animation: 1s linear infinite blinker;
+    
   }
   
   /* for Safari 4.0 - 8.0 */
-  @-webkit-keyframes condemned_blink_effect { 
+  @-webkit-keyframes blinker { 
     0% {
       visibility: hidden;
     }
@@ -114,7 +119,7 @@ input[type="checkbox"]:checked + label{
     }
   }
   
-  @keyframes condemned_blink_effect {
+  @keyframes blinker {
     0% {
       visibility: hidden;
     }
